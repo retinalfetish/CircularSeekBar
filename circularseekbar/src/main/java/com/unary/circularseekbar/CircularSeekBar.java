@@ -329,9 +329,19 @@ public class CircularSeekBar extends View {
     }
 
     @Override
+    protected int getSuggestedMinimumHeight() {
+        return Math.max(super.getSuggestedMinimumHeight(), dpToPixels(getContext(), VIEW_HEIGHT));
+    }
+
+    @Override
+    protected int getSuggestedMinimumWidth() {
+        return Math.max(super.getSuggestedMinimumWidth(), dpToPixels(getContext(), VIEW_WIDTH));
+    }
+
+    @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = getMeasurement(widthMeasureSpec, dpToPixels(getContext(), VIEW_WIDTH));
-        int height = getMeasurement(heightMeasureSpec, dpToPixels(getContext(), VIEW_HEIGHT));
+        int width = getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec);
+        int height = getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec);
 
         setMeasuredDimension(width, height);
     }
@@ -797,29 +807,6 @@ public class CircularSeekBar extends View {
     }
 
     /**
-     * Utility method to find the preferred measurements of this view for the view parent.
-     *
-     * @param measureSpec Constraint imposed by the parent.
-     * @param defaultSize Default size of the view.
-     * @return Preferred size for this view.
-     * @see #getDefaultSize(int, int)
-     */
-    private static int getMeasurement(int measureSpec, int defaultSize) {
-        int mode = MeasureSpec.getMode(measureSpec);
-        int size = MeasureSpec.getSize(measureSpec);
-
-        switch (mode) {
-            case MeasureSpec.EXACTLY:
-                return size;
-            case MeasureSpec.AT_MOST:
-                return Math.min(size, defaultSize);
-            case MeasureSpec.UNSPECIFIED:
-            default:
-                return defaultSize;
-        }
-    }
-
-    /**
      * Utility method to find a color as defined in the attribute of a theme.
      *
      * @param context   Context given for the attribute. This determines the resources and theme.
@@ -855,6 +842,29 @@ public class CircularSeekBar extends View {
     @Dimension
     private static float pixelsToDp(Context context, int px) {
         return px / context.getResources().getDisplayMetrics().density;
+    }
+
+    /**
+     * Utility method to find the preferred measurements of this view for the view parent.
+     *
+     * @param defaultSize Default size of the view.
+     * @param measureSpec Constraints imposed by the parent.
+     * @return Preferred size for this view.
+     * @see View#getDefaultSize(int, int)
+     */
+    public static int getDefaultSize(int defaultSize, int measureSpec) {
+        int mode = MeasureSpec.getMode(measureSpec);
+        int size = MeasureSpec.getSize(measureSpec);
+
+        switch (mode) {
+            case MeasureSpec.EXACTLY:
+                return size;
+            case MeasureSpec.AT_MOST:
+                return Math.min(size, defaultSize);
+            case MeasureSpec.UNSPECIFIED:
+            default:
+                return defaultSize;
+        }
     }
 
     /**

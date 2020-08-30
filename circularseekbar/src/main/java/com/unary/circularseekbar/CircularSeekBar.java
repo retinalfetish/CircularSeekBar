@@ -95,6 +95,7 @@ public class CircularSeekBar extends View {
     private static final int MAX = 100;
     private static final int PROGRESS = 0;
     private static final float MULTIPLIER = 100;
+    private static final int MAX_LEVEL = 10000;
 
     private float mStartAngle;
     private float mStrokeWidth;
@@ -422,7 +423,10 @@ public class CircularSeekBar extends View {
         int bottom = top + (int) mThumbRadius * 2;
 
         if (mThumbDrawable != null) {
-            mThumbDrawable.setLevel(mProgress);
+            // Ratio for MAX_LEVEL compatibility
+            int level = (int) (angle / mSweepAngle * MAX_LEVEL + 0.5);
+
+            mThumbDrawable.setLevel(level);
             mThumbDrawable.setBounds(left, top, right, bottom);
             mThumbDrawable.draw(canvas);
         }

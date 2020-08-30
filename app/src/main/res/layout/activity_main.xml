@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.unary.circularseekbar.CircularSeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:max="5"
+        app:min="1"
+        app:progress="2"
+        app:progressColor="@color/color_selector"
+        app:scrollMode="gravity"
+        app:startAngle="135"
+        app:sweepAngle="270"
+        app:touchInside="false" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="48sp"
+        tools:text="0" />
+
+</FrameLayout>

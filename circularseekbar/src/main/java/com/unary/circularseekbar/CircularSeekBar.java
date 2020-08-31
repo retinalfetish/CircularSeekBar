@@ -429,8 +429,8 @@ public class CircularSeekBar extends View {
         // Downcast the floats here
         int left = mThumbOrb.x - (int) mThumbRadius;
         int top = mThumbOrb.y - (int) mThumbRadius;
-        int right = left + (int) mThumbRadius * 2;
-        int bottom = top + (int) mThumbRadius * 2;
+        int right = mThumbOrb.x + (int) mThumbRadius;
+        int bottom = mThumbOrb.y + (int) mThumbRadius;
 
         if (mThumbDrawable != null) {
             // Ratio for MAX_LEVEL compatibility

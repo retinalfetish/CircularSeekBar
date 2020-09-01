@@ -2,10 +2,10 @@
 A styleable circular SeekBar widget. The user can initiate changes to the progress level by moving a draggable thumb or touching the drawn arc.
  
 ## Screenshots
-<img src="/images/screenshot-default.png" alt="Screenshot" height=600>
+<img src="/images/screenshot-default.png" alt="Screenshot" height=600> <img src="/images/screenshot-arc.png" alt="Screenshot" height=600>
  
 ## Usage
-The source code can be copied from the single class file and attrs.xml in to your project or included by adding [jitpack.io](https://jitpack.io/) to the root build.gradle and `implementation 'com.unary:circularseekbar:1.0.0'` as a module dependency.
+The source code can be copied from the single class file and attrs.xml in to your project or included by adding [jitpack.io](https://jitpack.io/) to the root build.gradle and `implementation 'com.unary:circularseekbar:1.1.0'` as a module dependency.
 ```
 allprojects {
     repositories {

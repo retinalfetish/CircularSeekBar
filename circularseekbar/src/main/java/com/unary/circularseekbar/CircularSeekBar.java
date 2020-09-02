@@ -1082,7 +1082,7 @@ public class CircularSeekBar extends View {
      *
      * @return True if touch inside is enabled.
      */
-    public boolean hasTouchInside() {
+    public boolean canTouchInside() {
         return mTouchInside;
     }
 

@@ -2,10 +2,10 @@
 A styleable circular SeekBar widget. The user can initiate changes to the progress level by moving a draggable thumb or touching the drawn arc.
  
 ## Screenshots
-<img src="/images/screenshot-default.png" alt="Screenshot" height=600> <img src="/images/screenshot-arc.png" alt="Screenshot" height=600>
+<img src="/art/screenshot-default.png" alt="Screenshot" height=600> <img src="/art/screenshot-arc.png" alt="Screenshot" height=600>
  
 ## Usage
-The source code can be copied from the single class file and attrs.xml in to your project or included by adding [jitpack.io](https://jitpack.io/) to the root build.gradle and `implementation 'com.unary:circularseekbar:1.1.0'` as a module dependency.
+The source code can be copied from the single class file and attrs.xml in to your project or included by adding [jitpack.io](https://jitpack.io/#com.unary/circularseekbar) to the root build.gradle and `implementation 'com.unary:circularseekbar:1.1.0'` as a module dependency.
 ```
 allprojects {
     repositories {
@@ -34,7 +34,7 @@ This widget has a number of options that can be configured in both the XML and c
 ```
 Drift, gravity, and snap scroll modes:
 
-<img src="/images/screenshot-drift.gif" alt="Screenshot" height=400> <img src="/images/screenshot-gravity.gif" alt="Screenshot" height=400> <img src="/images/screenshot-snap.gif" alt="Screenshot" height=400>
+<img src="/art/screenshot-drift.gif" alt="Screenshot" height=400> <img src="/art/screenshot-gravity.gif" alt="Screenshot" height=400> <img src="/art/screenshot-snap.gif" alt="Screenshot" height=400>
 
 The listener interface:
 ```

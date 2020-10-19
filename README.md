@@ -1,5 +1,5 @@
 # CircularSeekBar
-A styleable circular SeekBar widget. The user can initiate changes to the progress level by moving a draggable thumb or touching the drawn arc.
+A styleable circular [SeekBar](https://developer.android.com/reference/android/widget/SeekBar) widget. The user can initiate changes to the progress level by moving a draggable thumb or touching the drawn arc.
  
 ## Screenshots
 <img src="/art/screenshot-default.png" alt="Screenshot" height=600> <img src="/art/screenshot-arc.png" alt="Screenshot" height=600>

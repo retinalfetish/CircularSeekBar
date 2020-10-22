@@ -5,7 +5,7 @@ A styleable circular [SeekBar](https://developer.android.com/reference/android/w
 <img src="/art/screenshot-default.png" alt="Screenshot" height=600> <img src="/art/screenshot-arc.png" alt="Screenshot" height=600>
  
 ## Usage
-The library is part of [JCenter](https://bintray.com/rogue/maven/com.unary%3Acircularseekbar) (a default repository for Android Studio) and can be included in your project by adding `implementation 'com.unary:circularseekbar:1.1.0'` as a module dependency. The latest build can also be found at [JitPack](https://jitpack.io/#com.unary/circularseekbar).
+The library is part of [JCenter](https://bintray.com/rogue/maven/com.unary%3Acircularseekbar) (a default repository) and can be included in your project by adding `implementation 'com.unary:circularseekbar:1.1.0'` as a module dependency. The latest build can also be found at [JitPack](https://jitpack.io/#com.unary/circularseekbar).
 ```
 allprojects {
     repositories {
